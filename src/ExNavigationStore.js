@@ -1,5 +1,5 @@
 /**
- * @flow
+ * @noflow
  */
 
 import { applyMiddleware, createStore, compose, combineReducers } from 'redux';
