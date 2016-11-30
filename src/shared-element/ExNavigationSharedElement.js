@@ -1,5 +1,5 @@
 /**
- * @flow
+ * @noflow
  */
 
 import React, { Component, PropTypes, cloneElement } from 'react';

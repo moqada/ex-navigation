@@ -1,5 +1,5 @@
 /**
- * @flow
+ * @noflow
  */
 
 type Uid = string;
