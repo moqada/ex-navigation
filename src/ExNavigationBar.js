@@ -10,11 +10,11 @@ import {
   ViewPropTypes,
 } from 'react-native';
 import PropTypes from 'prop-types';
+import {isIphoneX} from 'react-native-iphone-x-helper';
 import PureComponent from './utils/PureComponent';
 import { unsupportedNativeView } from './ExUnsupportedNativeView';
 import { withNavigation } from './ExNavigationComponents';
 
-import isIPhoneX from './utils/isIPhoneX';
 
 let BlurView;
 let expoModule = global.__exponent || global.__expo;
@@ -39,8 +39,8 @@ const BORDER_BOTTOM_WIDTH =
   Platform.OS === 'ios' ? StyleSheet.hairlineWidth : 0;
 const BACK_BUTTON_HIT_SLOP = { top: 0, bottom: 0, left: 0, right: 30 };
 
-const IPHONE_X_EXTRA_HEIGHT = isIPhoneX ? 20 : 0;
-const IPHONE_X_TOP_OFFSET = isIPhoneX ? 30 : 0;
+const IPHONE_X_EXTRA_HEIGHT = isIphoneX() ? 20 : 0;
+const IPHONE_X_TOP_OFFSET = isIphoneX() ? 30 : 0;
 
 class ExNavigationBarTitle extends PureComponent {
   render() {

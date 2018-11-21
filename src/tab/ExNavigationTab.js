@@ -17,12 +17,12 @@ import ExNavigatorContext from '../ExNavigatorContext';
 import ExNavigationTabBar from './ExNavigationTabBar';
 import ExNavigationTabItem from './ExNavigationTabItem';
 import { createNavigatorComponent } from '../ExNavigationComponents';
-import isIPhoneX from '../utils/isIPhoneX';
+import {isIphoneX} from 'react-native-iphone-x-helper';
 
 import type ExNavigationContext from '../ExNavigationContext';
 
-const IPHONE_X_EXTRA_HEIGHT = isIPhoneX ? 38 : 0;
-const IPHONE_X_BOTTOM_OFFSET = isIPhoneX ? 28 : 0;
+const IPHONE_X_EXTRA_HEIGHT = isIphoneX() ? 38 : 0;
+const IPHONE_X_BOTTOM_OFFSET = isIphoneX() ? 28 : 0;
 
 export class ExNavigationTabContext extends ExNavigatorContext {
   type = 'tab';
